@@ -1,41 +1,23 @@
-/* Default (Light Theme) */
-body {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    color: #4CAF50;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  li {
-    padding: 8px;
-    margin-bottom: 5px;
-  }
-  
-  .list {
-    background-color: #f9f9f9;
-    border-left: 5px solid #4CAF50;
-  }
-  
-  /* Dark Theme */
-  body.dark-theme {
-    background-color: #333;
-    color: #ffffff;
-  }
-  
-  .dark-theme h1 {
-    color: #f9a825;
-  }
-  
-  .dark-theme .list {
-    background-color: #444;
-    border-left: 5px solid #f9a825;
-  }
-  
+.navbar {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Align items in a row */
+  justify-content: center; /* Center the navbar items */
+  background-color: #E7DFD8; /* Background color of navbar */
+}
+
+.navbar li {
+  margin: 0; /* Remove margin from list items */
+}
+
+.navbar a {
+  display: block; /* Make links block-level for easier clicking */
+  padding: 14px 20px; /* Add padding */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  text-decoration-line: underline; /* Remove underline */
+}
+
+.navbar a:hover {
+  background-color: #575757; /* Change background on hover */
+}
