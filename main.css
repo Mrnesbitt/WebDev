@@ -1,23 +1,75 @@
+h1 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2..5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 2rem;
+  font-weight:lighter;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  text-align: left;
+   
+}
+
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.text-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.responsive-image {
+  width: 100%;
+  height: fit-content;
+  max-width: fit-content; /* Set a max width for your image */
+  align-content: space-between;
+}
+
+/* Keep the existing navbar style */
 .navbar {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  display: flex; /* Align items in a row */
-  justify-content: center; /* Center the navbar items */
-  background-color: #E7DFD8; /* Background color of navbar */
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  
 }
 
 .navbar li {
-  margin: 0; /* Remove margin from list items */
+  margin: 0;
 }
 
 .navbar a {
-  display: block; /* Make links block-level for easier clicking */
-  padding: 14px 20px; /* Add padding */
-  color: white; /* Text color */
-  text-align: center; /* Center the text */
-  text-decoration-line: underline; /* Remove underline */
+  display: block;
+  padding: 14px 20px;
+  color: rgb(20, 18, 18);
+  text-align: center;
+  text-decoration: none;
 }
 
 .navbar a:hover {
-  background-color: #575757; /* Change background on hover */
+  background-color: #575757;
 }
