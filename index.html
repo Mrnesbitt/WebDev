@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Street Comics</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <nav>
             <ul class="navbar">
@@ -23,11 +25,25 @@
             <h1>Welcome to Street Comics</h1>
             <h2>Our stories are ours to write.</h2>
         </div>
-        
-        <div class="image-section">
-            <img src="Images/Photo2.png" alt="Street Comics Image" class="responsive-image" />
-        </div>
     </div>
-    
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="Images/logo-white.png" alt="A photo of me" class="active">
+            <img src="Images/Photo2.png" alt="A photo of me">
+            <img src="Images/Photo3.png" alt="Another Photo of Me">
+            <img src="Images/Photo4.png" alt="Some stuff">
+            <img src="Images/Photo6.png" alt="More Photos">
+            <img src="Images/G&J.PNG" alt="Gems and Journeys">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- <footer class="bottom-bar">
+        <p>Welcome to The Streets Young Traveler</p>
+    </footer> -->
+
+    <script src="script.js"></script> <!-- Custom JS Script -->
 </body>
 </html>
