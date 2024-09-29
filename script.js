@@ -3,25 +3,36 @@ const images = document.querySelectorAll('.carousel-images img');
 const totalImages = images.length;
 
 // Show the first image initially
-images[currentIndex].classList.add('active');
+images[currentIndex].style.display = 'block';
 
 // Function to change the slide
-function changeSlide(direction) {
-    // Remove active class from current image
-    images[currentIndex].classList.remove('active');
+function changeSlide() {
+    // Hide the current image
+    images[currentIndex].style.display = 'none';
 
     // Update the current index
     currentIndex = (currentIndex + 1) % totalImages;
 
-    // Add active class to the new current image
-    images[currentIndex].classList.add('active');
+    // Show the new current image
+    images[currentIndex].style.display = 'block';
 }
 
 // Set interval for autoplay
-setInterval(() => {
-    changeSlide(1); // Change to the next slide
-}, 3000); // Change every 3 seconds
+let interval = setInterval(changeSlide, 3000); // Change every 3 seconds
+
+// Pause autoplay on hover
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('mouseenter', () => clearInterval(interval));
+carousel.addEventListener('mouseleave', () => {
+    interval = setInterval(changeSlide, 3000); // Restart autoplay
+});
 
 // Add event listeners for buttons
-document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+document.querySelector('.prev').addEventListener('click', () => {
+    // Hide the current image
+    images[currentIndex].style.display = 'none';
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Move to previous
+    images[currentIndex].style.display = 'block'; // Show new image
+});
+
+document.querySelector('.next').addEventListener('click', changeSlide);

@@ -16,6 +16,7 @@
                 <li><a href="buy.html">Buy My Book</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href= "upcoming.html"> Coming Soon</a></li>
             </ul>
         </nav>
     </header>
@@ -29,13 +30,36 @@
 
     <div class="carousel">
         <div class="carousel-images">
-            <img src="Images/logo-white.png" alt="A photo of me" class="active">
-            <img src="Images/Photo2.png" alt="A photo of me">
-            <img src="Images/Photo3.png" alt="Another Photo of Me">
-            <img src="Images/Photo4.png" alt="Some stuff">
-            <img src="Images/Photo6.png" alt="More Photos">
-            <img src="Images/G&J.PNG" alt="Gems and Journeys">
+                <img src="Images/logo-black.png" alt="The Logo" class="responsive-image active">
+               
+            
+            <a href="https://www.webtoons.com/en/canvas/gems-and-journeys/the-hunt-begins/viewer?title_no=805507&episode_no=1">
+                <img src="Images/G&J.PNG" alt="gems-and-journeys" class="responsive-image">
+                <button class="image-button">Read on Webtoon</button>
+            </a>
+
+            <a href="upcoming.html">
+                <img src="Images/Under Construction.png" alt="YouTube" class="responsive-image">
+                <button class="image-button">Upcoming Projects</button>
+            </a>
+
+            <a href="https://www.youtube.com/@TheStreetComic">
+                <img src="Images/YOUTUBE.png" alt="YouTube" class="responsive-image">
+                <button class="image-button">Watch on YouTube</button>
+            </a>
+
+            <a href="https://soundcloud.com/street-comics">
+                <img src="Images/IMG_0523.png" alt="soundcloud" class="responsive-image">
+                <button class="image-button">Listen on SoundCloud</button>
+            </a>
+
+            <a href="blog.html">
+                <img src="Images/pencils.jpg" alt="YouTube" class="responsive-image">
+                <button class="image-button">Blog</button>
+            </a>
+
         </div>
+
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
@@ -44,6 +68,35 @@
         <p>Welcome to The Streets Young Traveler</p>
     </footer> -->
 
-    <script src="script.js"></script> <!-- Custom JS Script -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+
+        // Show the first image initially
+        images[currentIndex].style.display = 'block';
+
+        // Function to change the slide
+        function changeSlide(direction) {
+            // Hide the current image
+            images[currentIndex].style.display = 'none';
+
+            // Update the current index
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+
+            // Show the new current image
+            images[currentIndex].style.display = 'block';
+        }
+
+        // Set interval for autoplay
+        let interval = setInterval(() => changeSlide(1), 3000); // Change every 3 seconds
+
+        // Pause autoplay on hover
+        const carousel = document.querySelector('.carousel');
+        carousel.addEventListener('mouseenter', () => clearInterval(interval));
+        carousel.addEventListener('mouseleave', () => {
+            interval = setInterval(() => changeSlide(1), 3000); // Restart autoplay
+        });
+    </script>
 </body>
 </html>

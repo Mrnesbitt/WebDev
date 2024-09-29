@@ -3,16 +3,24 @@ body {
   background: url('Images/notepaper.jpg') repeat; 
   color: #333;
 }
+
 .content-container {
   width: 50%;
   margin: 0 auto;
 }
 
 .navbar {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; /* Remove default margin */
+  width: 100%; /* Full-width navbar */
+  background-color: #333;
+  opacity: 5 ;
+  display: flex; /* Align items in a row */
+  justify-content: center; /* Center the navbar items */
+  font-size: 1.6rem; /* Adjust size as needed */
+  font-weight: normal;
+  margin-bottom: 1.5rem;
 }
 
 .navbar li {
@@ -21,59 +29,81 @@ body {
 
 .navbar a {
   display: block;
-  padding: 14px 20px;
-  color: black;
+  color: rgb(20, 18, 18); 
+  padding: 14px 20px; /* Add padding */
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Stylish font */
   text-align: center;
   text-decoration: none;
 }
 
 .navbar a:hover {
-  background-color: #575757;
+  background-color: #04AA6D;
   color: white;
+  transform: translateY(-3px); /* Lift the item slightly */
 }
 
-h1,h2 {
+h1, h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
 }
 
-.text-sextion {
+.text-section {
   display: flex;
   flex-direction: column;  
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
-  color: #333
-
+  color: #333;
 }
-
-
 
 .carousel {
   position: relative;
-  max-width: 600px; /* Adjust as needed */
-  margin: 0 auto; /* Center the carousel horizontally */
-  overflow: hidden; /* Hide overflow */
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
   display: block;
-  text-align: center; /* Ensure the content inside the carousel is centered */
+  text-align: center;
 }
 
-/* Carousel images */
 .carousel-images {
   display: flex;
   transition: transform 0.5s ease-in-out; 
-  width: 100%; 
+  width: 100%;
 }
 
+.carousel-images a {
+  display: block;
+  position: relative; /* Position for button */
+  max-width: 100%;
+}
+
+.image-button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Fade in/out effect */
+}
+
+.carousel-images a:hover .image-button,
+.image-button:hover {
+  opacity: 1; /* Show button on hover */
+}
 
 .carousel-images img {
   width: 100%;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: none; /* Hide all images by default */
 }
-
-
 
 .carousel-images img.active {
   display: block; /* Show active image */
@@ -90,6 +120,18 @@ button {
   cursor: pointer;
 }
 
+button.prev, button.next {
+  background-color: #333; /* Change button color */
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
 .prev {
   left: 10px;
 }
@@ -98,27 +140,14 @@ button {
   right: 10px;
 }
 
+button:hover {
+  background-color: #555; /* Darken button on hover */
+}
+
 .responsive-image {
-  width: 400; /* Adjust to fill the container */
-  height: 400; /* Maintain aspect ratio */
-  max-width: 300px; /* Limit the maximum width */
+  width: 100%; 
+  height: auto; 
+  max-width: 600px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-
-
-
-.bottom-bar {
-  text-align: center; /* Center the text */
-  position: relative; /* Position relative for any absolute children */
-  bottom: 0; /* Stick to the bottom of its container */
-  margin-top: 20px; /* Add space above the bottom bar */
-}
-
-.bottom-bar p {
-  margin: 0; /* Remove default margin */
-  font-family: 'Gill Sans', sans-serif; 
-  font-size: 18px; /* Increase font size */
-  font-weight: bold; /* Make the font bold */
-  color: #333; /* Change text color if needed */
-}
-
