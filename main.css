@@ -42,14 +42,6 @@ body, html {
     position: relative;
 }
 
-.content-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100vh;
-}
-
 .button-container {
     position: absolute;
     align-items: center;
