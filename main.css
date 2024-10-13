@@ -1,153 +1,73 @@
-body {
-  font-family: 'Gill Sans', sans-serif;
-  background: url('Images/notepaper.jpg') repeat; 
-  color: #333;
-}
-
-.content-container {
-  width: 50%;
-  margin: 0 auto;
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px / 1.8 "Lato", sans-serif;
+    color: #777;
 }
 
 .navbar {
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; /* Remove default margin */
-  width: 100%; /* Full-width navbar */
-  background-color: #333;
-  opacity: 5 ;
-  display: flex; /* Align items in a row */
-  justify-content: center; /* Center the navbar items */
-  font-size: 1.6rem; /* Adjust size as needed */
-  font-weight: normal;
-  margin-bottom: 1.5rem;
+    list-style-type: none; 
+    padding: 20px; 
+    margin: 0 auto;
+    width: 100%; 
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #333;
 }
 
 .navbar li {
-  margin: 0 10px;
+    margin: 0 20px;
 }
 
 .navbar a {
-  display: block;
-  color: rgb(20, 18, 18); 
-  padding: 14px 20px; /* Add padding */
-  color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Stylish font */
-  text-align: center;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
-  background-color: #04AA6D;
-  color: white;
-  transform: translateY(-3px); /* Lift the item slightly */
+    color: #FFD700;
 }
 
-h1, h2 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: center;
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-.text-section {
-  display: flex;
-  flex-direction: column;  
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  color: #333;
+.content-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
 }
 
-.carousel {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  overflow: hidden;
-  display: block;
-  text-align: center;
+.button-container {
+    position: absolute;
+    align-items: center;
+    right: 20px;
+    bottom: 20px;
 }
 
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out; 
-  width: 100%;
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-.carousel-images a {
-  display: block;
-  position: relative; /* Position for button */
-  max-width: 100%;
-}
-
-.image-button {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  color: white;
-  font-size: 24px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s; /* Fade in/out effect */
-}
-
-.carousel-images a:hover .image-button,
-.image-button:hover {
-  opacity: 1; /* Show button on hover */
-}
-
-.carousel-images img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: none; /* Hide all images by default */
-}
-
-.carousel-images img.active {
-  display: block; /* Show active image */
-}
-
-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-button.prev, button.next {
-  background-color: #333; /* Change button color */
-  color: white; 
-  border: none; 
-  padding: 10px 20px; 
-  cursor: pointer; 
-  font-size: 16px; 
-  position: absolute; 
-  top: 50%; 
-  transform: translateY(-50%); 
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-button:hover {
-  background-color: #555; /* Darken button on hover */
-}
-
-.responsive-image {
-  width: 100%; 
-  height: auto; 
-  max-width: 600px; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.button:hover {
+    background-color: #FFD700;
 }

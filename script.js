@@ -17,15 +17,15 @@ function changeSlide() {
     images[currentIndex].style.display = 'block';
 }
 
-// Set interval for autoplay
-let interval = setInterval(changeSlide, 3000); // Change every 3 seconds
+// // Set interval for autoplay
+// let interval = setInterval(changeSlide, 3000); // Change every 3 seconds
 
-// Pause autoplay on hover
-const carousel = document.querySelector('.carousel');
-carousel.addEventListener('mouseenter', () => clearInterval(interval));
-carousel.addEventListener('mouseleave', () => {
-    interval = setInterval(changeSlide, 3000); // Restart autoplay
-});
+// // Pause autoplay on hover
+// const carousel = document.querySelector('.carousel');
+// carousel.addEventListener('mouseenter', () => clearInterval(interval));
+// carousel.addEventListener('mouseleave', () => {
+//     interval = setInterval(changeSlide, 3000); // Restart autoplay
+// });
 
 // Add event listeners for buttons
 document.querySelector('.prev').addEventListener('click', () => {

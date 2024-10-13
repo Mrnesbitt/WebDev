@@ -1,7 +1,10 @@
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #E7DFD8; /* Background color */
-    color: #333; /* Text color */
+  font-family: 'Gill Sans', sans-serif;
+  /* background-image: url('Images/notepaper.jpg');  */
+  margin: 0;
+  padding: 0;
+  background-color: #d6cec7;
+
 }
 
 .content-container {
@@ -18,7 +21,10 @@ body {
     justify-content: flex-start; /* Align text to the top */
     align-items: flex-start; /* Align text to the left */
     text-align: left; /* Align text to the left within the text section */
-
+    background-color: #f8f8f8; /* Light background color */
+    padding: 20px; /* Add padding around text */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -32,6 +38,7 @@ body {
     width: 100%; /* Image takes full width of the section */
     height: auto; /* Maintain aspect ratio */
     max-width: 500px; /* Set a max width for your image */
+    border-radius: 5px;
 }
 
 h1 {
@@ -58,26 +65,37 @@ p {
 
 
 /* Center the navbar */
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px / 1.8 "Lato", sans-serif;
+    color: #777;
+}
+
 .navbar {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Align items in a row */
-    justify-content: center; /* Center the navbar items */
-    text-align: center; /* Center text in the navbar */
+    list-style-type: none; 
+    padding: 20px; 
+    margin: 0 auto;
+    width: 100%; 
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #333;
 }
 
 .navbar li {
-    margin: 0; /* Remove margin from list items */
+    margin: 0 20px;
 }
 
 .navbar a {
-    display: block; /* Make links block-level for easier clicking */
-    padding: 14px 20px; /* Add padding */
-    color: rgb(20, 18, 18); /* Text color */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
-    background-color: #575757; /* Change background on hover */
+    color: #FFD700;
 }

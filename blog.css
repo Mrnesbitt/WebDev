@@ -1,59 +1,34 @@
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #E7DFD8; /* Background color */
-    color: #333; /* Text color */
-}
-
-.content-container {
-    display: flex;
-    justify-content: space-between; /* Space between text and image */
-    align-items: flex-start; /* Align items to the top */
-    padding: 20px; /* Padding around the container */
-}
-
-.text-section {
-    flex: 1; /* Allow text section to grow */
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: flex-start; /* Align text to the top */
-    align-items: flex-start; /* Align text to the left */
-    text-align: center; /* Align text to the left within the text section */
-
-}
-
-
-
-p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.6rem; /* Adjust size as needed */
-    font-weight: normal;
-    margin-bottom: 1.5rem;
-
-}
-
-
-
-/* Center the navbar */
 .navbar {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Align items in a row */
-    justify-content: center; /* Center the navbar items */
-    text-align: center; /* Center text in the navbar */
+    list-style-type: none; 
+    padding: 20px; 
+    margin: 0 auto;
+    width: 100%; 
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #333;
 }
 
 .navbar li {
-    margin: 0; /* Remove margin from list items */
+    margin: 0 20px;
 }
 
 .navbar a {
-    display: block; /* Make links block-level for easier clicking */
-    padding: 14px 20px; /* Add padding */
-    color: rgb(20, 18, 18); /* Text color */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
-    background-color: #575757; /* Change background on hover */
+    color: #FFD700;
 }
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f8f5e9;
+    color: #333; /* Text color */
+}
+
+

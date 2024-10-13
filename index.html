@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Street Comics</title>
+    <title>Home - Simple But Complex</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
         <nav>
             <ul class="navbar">
@@ -16,87 +15,55 @@
                 <li><a href="buy.html">Buy My Book</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href= "upcoming.html"> Coming Soon</a></li>
+                <li><a href="upcoming.html">Coming Soon</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="content-container">
-        <div class="text-section">
-            <h1>Welcome to Street Comics</h1>
-            <h2>Our stories are ours to write.</h2>
+    <div class="content-1">
+        <div class="parallax" style="background-image: url('Images/sbc.png');">
+            <div class="button-container">
+                <a href="blog.html" class="button">Tap Here for Blog</a>
+            </div>
         </div>
     </div>
 
-    <div class="carousel">
-        <div class="carousel-images">
-                <img src="Images/logo-black.png" alt="The Logo" class="responsive-image active">
-               
+    <div class="content-2">
+        <div class="parallax" style="background-image: url('Images/BTD.PNG');">
+            <div class="button-container">
+                <a href="upcoming.html" class="button">Tap Here for Upcoming</a>
+            </div>
             
-            <a href="https://www.webtoons.com/en/canvas/gems-and-journeys/the-hunt-begins/viewer?title_no=805507&episode_no=1">
-                <img src="Images/G&J.PNG" alt="gems-and-journeys" class="responsive-image">
-                <button class="image-button">Read on Webtoon</button>
-            </a>
-
-            <a href="upcoming.html">
-                <img src="Images/Under Construction.png" alt="YouTube" class="responsive-image">
-                <button class="image-button">Upcoming Projects</button>
-            </a>
-
-            <a href="https://www.youtube.com/@TheStreetComic">
-                <img src="Images/YOUTUBE.png" alt="YouTube" class="responsive-image">
-                <button class="image-button">Watch on YouTube</button>
-            </a>
-
-            <a href="https://soundcloud.com/street-comics">
-                <img src="Images/IMG_0523.png" alt="soundcloud" class="responsive-image">
-                <button class="image-button">Listen on SoundCloud</button>
-            </a>
-
-            <a href="blog.html">
-                <img src="Images/pencils.jpg" alt="YouTube" class="responsive-image">
-                <button class="image-button">Blog</button>
-            </a>
-
         </div>
-
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 
-    <!-- <footer class="bottom-bar">
-        <p>Welcome to The Streets Young Traveler</p>
-    </footer> -->
+    <div class="content-3">
+        <div class="parallax" style="background-image: url('Images/G&J.PNG');">
+            <div class="button-container">
+                <a href="https://www.webtoons.com/en/canvas/gems-and-journeys/the-hunt-begins/viewer?title_no=805507&episode_no=1
+                " class="button">Tap Here for Comics</a>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.carousel-images img');
-        const totalImages = images.length;
+    <div class="content-4">
+        <div class="parallax" style="background-image: url('Images/IMG_0523.png');">
+            <div class="button-container">
+                <a href="https://soundcloud.com/street-comics" class="button">Tap Here for Music</a>
+            </div>
+        </div>
+    </div>
 
-        // Show the first image initially
-        images[currentIndex].style.display = 'block';
+    <div class="content-5">
+        <div class="parallax" style="background-image: url('Images/YOUTUBE.png');">
+            <div class="button-container">
+                <a href="https://www.youtube.com/@TheStreetComic" class="button">Tap Here for Videos</a>
+            </div>
+        </div>
+    </div>
 
-        // Function to change the slide
-        function changeSlide(direction) {
-            // Hide the current image
-            images[currentIndex].style.display = 'none';
+    
 
-            // Update the current index
-            currentIndex = (currentIndex + direction + totalImages) % totalImages;
-
-            // Show the new current image
-            images[currentIndex].style.display = 'block';
-        }
-
-        // Set interval for autoplay
-        let interval = setInterval(() => changeSlide(1), 3000); // Change every 3 seconds
-
-        // Pause autoplay on hover
-        const carousel = document.querySelector('.carousel');
-        carousel.addEventListener('mouseenter', () => clearInterval(interval));
-        carousel.addEventListener('mouseleave', () => {
-            interval = setInterval(() => changeSlide(1), 3000); // Restart autoplay
-        });
-    </script>
+    </div>
 </body>
 </html>
